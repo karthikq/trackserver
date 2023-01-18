@@ -1,12 +1,12 @@
 require("dotenv").config();
-require("./models/User");
-require("./models/Track");
+require("./src/models/User");
+require("./src/models/Track");
 const express = require("express");
 const mongoose = require("mongoose");
 
-const authRoutes = require("./routes/authRoutes");
-const trackRoutes = require("./routes/trackRoutes");
-const requireAuth = require("./middlewares/requireAuth");
+const authRoutes = require("./src/routes/authRoutes");
+const trackRoutes = require("./src/routes/trackRoutes");
+const requireAuth = require("./src/middlewares/requireAuth");
 const PORT = process.env.PORT || 5000;
 
 const app = express();
