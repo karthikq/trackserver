@@ -13,8 +13,8 @@ const app = express();
 app.use(express.json());
 app.use(authRoutes);
 app.use(trackRoutes);
-console.log(process.env.MONGO_PASS);
-const mongoUri = `mongodb+srv://${process.env.MONGO_PASS}:qwaszx@cluster0.44gx5.mongodb.net/reactnativetracker?retryWrites=true&w=majority`;
+
+const mongoUri = `mongodb+srv://testuser:${process.env.MONGO_PASS}@cluster0.44gx5.mongodb.net/reactnativetracker?retryWrites=true&w=majority`;
 
 if (!mongoUri) {
   throw new Error(
